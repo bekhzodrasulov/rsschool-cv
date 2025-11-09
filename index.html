@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bekhzod Rasulov - Frontend Developer CV</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="container">
+        <div class="logo">Bekhzod Rasulov</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <img
+              src="./img/myPhoto.jpg"
+              alt="Bekhzod Rasulov - Frontend Developer"
+              class="profile-photo"
+            />
+            <div class="hero-text">
+              <h1>Bekhzod Rasulov - Frontend Developer</h1>
+              <p class="hero-subtitle">
+                Passionate about creating beautiful, responsive web experiences
+                with modern technologies and clean code
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <h2>About Me</h2>
+          <div class="about-content">
+            <p>
+              I am a dedicated Frontend Developer with 1+ years of experience in
+              creating engaging, user-friendly web applications. I specialize in
+              modern JavaScript frameworks and have a passion for writing clean,
+              maintainable code. My goal is to bridge the gap between design and
+              technology, creating seamless digital experiences that users love.
+            </p>
+            <p>
+              I enjoy staying up-to-date with the latest web technologies and
+              best practices. When I'm not coding, you can find me contributing
+              to open-source projects, writing technical articles, or mentoring
+              junior developers in the community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <h2>Technical Skills</h2>
+          <ul class="skills-list">
+            <li>JavaScript (ES6+)</li>
+            <li>React.js</li>
+            <li>TypeScript</li>
+            <li>HTML5 &amp; CSS3</li>
+            <li>Sass/SCSS</li>
+            <li>Git &amp; GitHub</li>
+            <li>Webpack</li>
+            <li>Responsive Design</li>
+            <li>REST APIs</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <h3>E-Commerce Platform</h3>
+              <p>
+                A full-featured e-commerce solution built with React and
+                Node.js, featuring user authentication, payment processing, and
+                admin dashboard. Implemented responsive design and optimized for
+                performance.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/bekhzodrasulov/ecommerce-platform"
+                  target="_blank"
+                  >Source Code</a
+                >
+                <a href="https://ecommerce-demo.netlify.app" target="_blank"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Task Management App</h3>
+              <p>
+                A collaborative task management application with real-time
+                updates, drag-and-drop functionality, and team collaboration
+                features. Built with Vue.js and Firebase.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/johndoe/task-manager"
+                  target="_blank"
+                  >Source Code</a
+                >
+                <a href="https://taskmanager-vue.vercel.app" target="_blank"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Weather Dashboard</h3>
+              <p>
+                A responsive weather application that provides detailed
+                forecasts and weather data visualization using modern APIs and
+                charting libraries. Features geolocation and favorite cities.
+              </p>
+              <div class="project-links">
+                <a
+                  href="https://github.com/johndoe/weather-dashboard"
+                  target="_blank"
+                  >Source Code</a
+                >
+                <a href="https://weather-dash-react.netlify.app" target="_blank"
+                  >Live Demo</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="code-example">
+        <div class="container">
+          <h2>Code Example</h2>
+          <div class="code-block">
+            <h3>React Component with Hooks</h3>
+            <pre><code>import React, { useState, useEffect } from 'react';
+
+const UserProfile = ({ userId }) =&gt; {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    const fetchUser = async () =&gt; {
+      try {
+        const response = await fetch(`/api/users/${userId}`);
+        const userData = await response.json();
+        setUser(userData);
+      } catch (error) {
+        console.error('Error fetching user:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUser();
+  }, [userId]);
+
+  if (loading) return &lt;div&gt;Loading...&lt;/div&gt;;
+  if (!user) return &lt;div&gt;User not found&lt;/div&gt;;
+
+  return (
+    &lt;div className="user-profile"&gt;
+      &lt;h2&gt;{user.name}&lt;/h2&gt;
+      &lt;p&gt;{user.email}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default UserProfile;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="container">
+          <h2>Education &amp; Languages</h2>
+          <div class="education-content">
+            <div class="education-item">
+              <h3>Bachelor of Automation and Control.</h3>
+              <p class="institution">
+                TASHKENT STATE TECHNICAL UNIVERSITY NAMED AFTER ISLAM KARIMOV
+              </p>
+              <p class="duration">2019 - 2023</p>
+              <p>
+                Specialized in Automation and Control of Technological Processes
+                And Production (by industries).
+              </p>
+            </div>
+            <div class="education-item">
+              <h3>Najot Ta'lim JavaScript/Frontend Course</h3>
+              <p class="institution">Frontend Web Development</p>
+              <p class="duration">2024 - 2025</p>
+              <p>
+                Comprehensive frontend development course covering modern
+                JavaScript, React, and web development best practices.
+              </p>
+            </div>
+            <div class="language-skills">
+              <h3>Language Proficiency</h3>
+              <ul>
+                <li><strong>English:</strong> Upper-Intermediate (B2)</li>
+                <li><strong>Russian:</strong> Advenced (C1)</li>
+                <li><strong>Uzbek:</strong> Native</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <h2>Contact Information</h2>
+          <div class="contact-content">
+            <p>
+              I'm always interested in new opportunities and exciting projects.
+              Feel free to reach out!
+            </p>
+            <ul class="contact-list">
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:bekhzodr2001@gmail.com"
+                  >bekhzodr2001@gmail.com</a
+                >
+              </li>
+              <li>
+                <strong>LinkedIn:</strong>
+                <a href="https://linkedin.com/in/bekhzodrasulov" target="_blank"
+                  >linkedin.com/in/bekhzodrasulov</a
+                >
+              </li>
+              <li>
+                <strong>Telegram:</strong>
+                <a href="https://t.me/rasulov_bekhzod" target="_blank"
+                  >@rasulov_bekhzod</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <p>
+            <a href="https://github.com/bekhzodrasulov" target="_blank"
+              >GitHub Profile</a
+            >
+          </p>
+          <p>2025</p>
+          <div class="rs-school">
+            <a href="https://app.rs.school/" target="_blank">
+              <img src="./img/rsschool.jpg" alt="RS School" class="rs-logo" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
